@@ -7,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - node-sass
 - bulma
 - rbx
+- react-icons
 
 ## Project structure
 
