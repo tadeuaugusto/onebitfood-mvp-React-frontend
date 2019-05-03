@@ -10,6 +10,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - react-icons
 - slick-carousel
 - react-slick
+- redux
+- react-redux
+- redux-thunk
 
 ## Project structure
 
