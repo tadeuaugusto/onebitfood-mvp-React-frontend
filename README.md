@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Dependencies
+
+- react-router-dom
+- axios
+- node-sass
+- bulma
+- rbx
+
+## Project structure
+
+- assets
+- assets/images
+- components
+- screens
+- styles
+
 ## Available Scripts
 
 In the project directory, you can run:
