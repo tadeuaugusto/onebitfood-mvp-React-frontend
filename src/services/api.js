@@ -1,7 +1,14 @@
 import axios from "axios";
 
-const url = axios.create({ baseURL: "http://localhost:3001" })
+// const baseUrl = "http://localhost:3001";
+const baseUrl = "https://arcane-caverns-26717.herokuapp.com";
+const url = axios.create({ baseURL: baseUrl })
 
 export default {
-  loadRestaurants: () => url.get("/restaurants")
+  loadRestaurants: (category = null) => {
+    let filter = category ? `?category=${category.title}` : ""
+    return url.get(`/restaurants${filter}`)
+  },
+  
+  loadCategories: () => url.get("/categories")
 }
