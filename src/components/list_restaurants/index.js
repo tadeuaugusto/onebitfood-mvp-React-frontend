@@ -18,8 +18,8 @@ class ListRestaurants extends Component {
 
         <Column.Group multiline gapSize={2}>
           {
-            this.props.restaurants.map(restaurant => {
-              return <Restaurant {...restaurant}/>
+            this.props.restaurants.map((restaurant, i) => {
+              return <Restaurant {...restaurant} key={i} />
             })
           }
         </Column.Group>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment, Component } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -35,13 +36,12 @@ class Categories extends Component {
           <Slider {...slickSettings}>
             {this.state.categories.map((category, i) => {
               return (
-                // eslint-disable-next-line jsx-a11y/anchor-is-valid
-                <a href="#" onClick={() => this.filterByCategory(category)}>
-                  <div className="slider-item" key={i}>
+                <div className="slider-item" key={i}>
+                <a href="#" onClick={() => { this.filterByCategory(category) }}>
                     <img src={category.image_url} alt="new"/>
                     <span>{category.title}</span>
-                  </div>
                 </a>
+                </div>
               )
             })}
           </Slider>
@@ -51,6 +51,10 @@ class Categories extends Component {
   }
 }
 
+const mapStateToProps = store => ({
+  // address: store.addressState.address
+});
+
 const mapDispatchToProps = dispatch => bindActionCreators({ loadRestaurants }, dispatch);
 
-export default connect(null, mapDispatchToProps)(Categories);
+export default connect(mapStateToProps, mapDispatchToProps)(Categories);

@@ -1,15 +1,16 @@
 import axios from "axios";
 
-// const baseUrl = "http://localhost:3001";
-const baseUrl = "https://arcane-caverns-26717.herokuapp.com";
-const url = axios.create({ baseURL: baseUrl })
+// https://arcane-caverns-26717.herokuapp.com
+// http://localhost:3001
+const url = axios.create({ baseURL: "http://localhost:3001" })
 
 export default {
   loadRestaurants: (category = null) => {
     let filter = category ? `?category=${category.title}` : ""
     return url.get(`/restaurants${filter}`)
   },
-  
-  loadCategories: () => url.get("/categories"),
-  searchRestaurants: (search) => url.get(`/restaurants/search?q=${search}`)
+
+  searchRestaurants: (search) => url.get(`/restaurants/search?q=${search}`),
+  getRestaurant: (id) => url.get(`restaurants/${id}`),
+  loadCategories: () => url.get("/categories")
 }
