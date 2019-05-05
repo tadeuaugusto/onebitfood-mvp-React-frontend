@@ -13,7 +13,7 @@ import { FaCrosshairs } from 'react-icons/fa';
 import "../../styles/header.scss";
 
 const Header = (props) => (
-  <div class="top-navbar">
+  <div className="top-navbar">
     <Container>
       <Navbar>
           <Navbar.Brand>
@@ -21,7 +21,7 @@ const Header = (props) => (
           </Navbar.Brand>
 
           <Navbar.Menu>
-            <Navbar.Segment as="div" class="navbar-item navbar-center">
+            <Navbar.Segment as="div" className="navbar-item navbar-center" align="center">
               <SearchBox />
             </Navbar.Segment>
             <Navbar.Segment as="div" align="end">

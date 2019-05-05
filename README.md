@@ -13,6 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - redux
 - react-redux
 - redux-thunk
+- redux-persist
 
 ## Project structure
 
