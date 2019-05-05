@@ -10,5 +10,6 @@ export default {
     return url.get(`/restaurants${filter}`)
   },
   
-  loadCategories: () => url.get("/categories")
+  loadCategories: () => url.get("/categories"),
+  searchRestaurants: (search) => url.get(`/restaurants/search?q=${search}`)
 }
