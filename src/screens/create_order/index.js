@@ -6,10 +6,10 @@ import "../../styles/create_order.scss"
 
 const CreateOrder = (props) => (
   <Column.Group centered>
-    <Column size="4">
+    <Column size="5">
       <OrderForm/>
     </Column>
-    <Column size="3" offset="1">
+    <Column size="4">
       <Box className="shopping_cart">
         <Order finish_btn_active={false}/>
       </Box>
