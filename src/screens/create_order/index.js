@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import OrderForm from "../../components/order_form";
-import { Column, Button, Icon, Title, Box } from "rbx";
+import { Column, Box } from "rbx";
 import Order from "../../components/order";
 import "../../styles/create_order.scss"
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Box, Column, Icon, Title } from "rbx";
+import { Box, Column, Icon } from "rbx";
 import { bindActionCreators } from 'redux';
 import { hideModal } from "../../actions/modal";
 import { FaTimes } from 'react-icons/fa';

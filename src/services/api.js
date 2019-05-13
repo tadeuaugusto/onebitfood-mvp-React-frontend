@@ -1,8 +1,8 @@
 import axios from "axios";
+import host from './constants';
 
-// https://arcane-caverns-26717.herokuapp.com
-// http://localhost:3001
-const url = axios.create({ baseURL: "http://localhost:3001" })
+const url = axios.create({ baseURL: host.baseURL })
+
 
 export default {
   loadRestaurants: (address, category) => {
@@ -39,4 +39,6 @@ export default {
 
     return url.post(`orders`, order)
   },
+
+  loadOrder: (id) => url.get(`orders/${id}`)
 }
